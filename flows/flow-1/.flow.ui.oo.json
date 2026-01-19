@@ -6,6 +6,13 @@
           "x": 339,
           "y": 330
         }
+      },
+      "sections": {
+        "inputs": {
+          "groupCollapsed": {
+            "optional": true
+          }
+        }
       }
     }
   }
