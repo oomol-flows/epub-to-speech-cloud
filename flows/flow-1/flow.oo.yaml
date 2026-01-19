@@ -1,0 +1,15 @@
+nodes:
+  - node_id: epub2speech#1
+    title: "EPUB to Speech #1"
+    inputs_from:
+      - handle: epub_path
+        value: /oomol-driver/oomol-storage/book_source/《明朝那些事儿》.epub
+      - handle: voice
+        value: zh_male_lengkugege_emo_v2_mars_bigtts
+      - handle: output_filename
+        value: audiobook
+      - handle: merge
+        value: true
+      - handle: max_chunk_length
+        value: 500
+    task: self::epub2speech

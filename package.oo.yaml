@@ -1,0 +1,13 @@
+version: 0.0.1
+scripts:
+  # Script executed when the container is first loaded
+  # eg: bootstrap: poetry add pandas
+  bootstrap: |
+    npm install
+    poetry install --no-root
+
+    apt update && apt install -y openssh-client
+
+    wget https://static.oomol.com/sshexec/v1.0.13/installer.sh --output-document /tmp/installer.sh
+
+    bash +x /tmp/installer.sh

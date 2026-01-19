@@ -1,0 +1,85 @@
+inputs_def:
+  - handle: epub_path
+    description: Path to the EPUB file to convert
+    json_schema:
+      type: string
+      ui:widget: file
+      ui:options:
+        filters:
+          - name: EPUB
+            extensions:
+              - epub
+        excludeAll: true
+    nullable: false
+
+  - handle: voice
+    description: TTS voice model (OOMOL Doubao TTS)
+    json_schema:
+      type: string
+      enum:
+        - zh_male_lengkugege_emo_v2_mars_bigtts
+        - zh_female_tianmeixiaomei_emo_v2_mars_bigtts
+        - zh_female_gaolengyujie_emo_v2_mars_bigtts
+        - zh_male_aojiaobazong_emo_v2_mars_bigtts
+        - zh_male_guangzhoudege_mars_bigtts
+        - zh_male_jingqiangkanye_mars_bigtts
+        - zh_female_linjuaayi_mars_bigtts
+        - zh_male_yourougongzi_mars_bigtts
+        - zh_male_ruyananyou_emo_v2_mars_bigtts
+        - zh_male_junlangnanyou_emo_v2_mars_bigtts
+        - zh_male_beijingxiaoye_mars_bigtts
+        - zh_female_roumeinvyou_emo_v2_mars_bigtts
+        - zh_male_yangguangqingnian_emo_v2_mars_bigtts
+        - zh_female_meilinvyou_emo_v2_mars_bigtts
+        - zh_male_shenyeboke_mars_bigtts
+        - en_female_candice_emo_v2_mars_bigtts
+        - en_female_serena_emo_v2_mars_bigtts
+        - en_male_glen_emo_v2_mars_bigtts
+        - en_male_sylus_emo_v2_mars_bigtts
+        - en_male_corey_mars_bigtts
+        - en_female_nadia_mars_bigtts
+    value: zh_female_tianmeixiaomei_emo_v2_mars_bigtts
+    nullable: false
+
+  - group: optional
+    collapsed: true
+
+  - handle: output_filename
+    description: "Output filename without extension (optional, default: audiobook)"
+    json_schema:
+      type: string
+    value:
+    nullable: true
+
+  - handle: merge
+    description: "Merge all chapters into a single M4B audiobook (optional, default: true)"
+    json_schema:
+      type: boolean
+    value:
+    nullable: true
+  - handle: max_chunk_length
+    description: "Maximum text length per TTS request in characters (optional,
+      default: 500)"
+    json_schema:
+      type: number
+    value:
+    nullable: true
+
+outputs_def:
+  - handle: audiobook_path
+    description: Path to the generated audiobook file
+    json_schema:
+      type: string
+      ui:widget: file
+
+executor:
+  name: python
+  options:
+    entry: __init__.py
+    spawn: false
+
+title: "EPUB to Speech"
+icon: ":carbon:book:"
+description: "Convert EPUB e-books into audio using OOMOL TTS. Extracts
+  chapters, converts each chapter to speech, and optionally merges into an M4B
+  audiobook with chapter navigation."

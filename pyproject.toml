@@ -1,0 +1,23 @@
+[project]
+name = "epub-to-speech-cloud"
+version = "0.1.0"
+description = ""
+authors = [
+    {name = "shaun",email = "beingswu@gmail.com"}
+]
+readme = "README.md"
+requires-python = ">=3.11,<3.13"
+dependencies = [
+    "ebooklib (>=0.19,<0.20)",
+    "beautifulsoup4 (>=4.14.3,<5.0.0)",
+    "epub2speech (>=0.0.5,<0.0.6)"
+]
+
+[tool.poetry]
+package-mode = false
+packages = [{include = "epub_to_speech_cloud", from = "src"}]
+
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
