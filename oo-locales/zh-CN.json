@@ -1,0 +1,13 @@
+{
+  "display-name": "EPUB 转有声书转换器",
+  "description": "将您的电子书转换为有声书，支持自定义语音、自动章节整理，以及可在任意设备上播放的专业音频输出。",
+  "epub-to-speech-1": "EPUB 转语音 #1",
+  "epub-to-speech": "EPUB 转语音",
+  "convert-epub-e-books-into-audio-using-oomol-tts-extracts-chapter": "使用 OOMOL TTS 将 EPUB 电子书转换为音频。提取章节，将每个章节转换为语音，并可选地合并为带有章节导航的 M4B 有声书。",
+  "path-to-the-epub-file-to-convert": "要转换的 EPUB 文件路径",
+  "tts-voice-model-oomol-doubao-tts": "TTS 语音模型（OOMOL 豆包 TTS）",
+  "output-filename-without-extension-optional-default-audiobook": "输出文件名（不含扩展名）（可选，默认值：audiobook）",
+  "merge-all-chapters-into-a-single-m4b-audiobook-optional-default": "将所有章节合并为一个 M4B 有声书（可选，默认值：true）",
+  "maximum-text-length-per-tts-request-in-characters-optional-defau": "每次 TTS 请求的最大文本长度（可选，默认值：500 个字符）",
+  "path-to-the-generated-audiobook-file": "生成的有声书文件路径"
+}

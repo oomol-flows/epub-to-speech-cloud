@@ -1,6 +1,6 @@
 inputs_def:
   - handle: epub_path
-    description: Path to the EPUB file to convert
+    description: "%path-to-the-epub-file-to-convert%"
     json_schema:
       type: string
       ui:widget: file
@@ -13,7 +13,7 @@ inputs_def:
     nullable: false
 
   - handle: voice
-    description: TTS voice model (OOMOL Doubao TTS)
+    description: "%tts-voice-model-oomol-doubao-tts%"
     json_schema:
       type: string
       enum:
@@ -45,21 +45,20 @@ inputs_def:
     collapsed: true
 
   - handle: output_filename
-    description: "Output filename without extension (optional, default: audiobook)"
+    description: "%output-filename-without-extension-optional-default-audiobook%"
     json_schema:
       type: string
     value:
     nullable: true
 
   - handle: merge
-    description: "Merge all chapters into a single M4B audiobook (optional, default: true)"
+    description: "%merge-all-chapters-into-a-single-m4b-audiobook-optional-default%"
     json_schema:
       type: boolean
     value:
     nullable: true
   - handle: max_chunk_length
-    description: "Maximum text length per TTS request in characters (optional,
-      default: 500)"
+    description: "%maximum-text-length-per-tts-request-in-characters-optional-defau%"
     json_schema:
       type: number
     value:
@@ -67,7 +66,7 @@ inputs_def:
 
 outputs_def:
   - handle: audiobook_path
-    description: Path to the generated audiobook file
+    description: "%path-to-the-generated-audiobook-file%"
     json_schema:
       type: string
       ui:widget: file
@@ -78,8 +77,6 @@ executor:
     entry: __init__.py
     spawn: false
 
-title: "EPUB to Speech"
+title: "%epub-to-speech%"
 icon: ":carbon:book:"
-description: "Convert EPUB e-books into audio using OOMOL TTS. Extracts
-  chapters, converts each chapter to speech, and optionally merges into an M4B
-  audiobook with chapter navigation."
+description: "%convert-epub-e-books-into-audio-using-oomol-tts-extracts-chapter%"

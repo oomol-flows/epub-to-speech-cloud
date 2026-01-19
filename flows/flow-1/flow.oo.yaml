@@ -1,6 +1,6 @@
 nodes:
   - node_id: epub2speech#1
-    title: "EPUB to Speech #1"
+    title: "%epub-to-speech-1%"
     inputs_from:
       - handle: epub_path
         value: /oomol-driver/oomol-storage/book_source/《明朝那些事儿》.epub

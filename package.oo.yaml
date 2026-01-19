@@ -1,3 +1,6 @@
+name: epub-to-audiobook-converter
+displayName: "%display-name%"
+description: "%description%"
 version: 0.0.1
 scripts:
   # Script executed when the container is first loaded

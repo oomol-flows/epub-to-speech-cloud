@@ -1,0 +1,13 @@
+{
+  "display-name": "EPUB to Audiobook Converter",
+  "description": "Transform your e-books into audiobooks with customizable voices, automatic chapter organization, and professional-quality audio output that works on any device.",
+  "epub-to-speech-1": "EPUB to Speech #1",
+  "epub-to-speech": "EPUB to Speech",
+  "convert-epub-e-books-into-audio-using-oomol-tts-extracts-chapter": "Convert EPUB e-books into audio using OOMOL TTS. Extracts chapters, converts each chapter to speech, and optionally merges into an M4B audiobook with chapter navigation.",
+  "path-to-the-epub-file-to-convert": "Path to the EPUB file to convert",
+  "tts-voice-model-oomol-doubao-tts": "TTS voice model (OOMOL Doubao TTS)",
+  "output-filename-without-extension-optional-default-audiobook": "Output filename without extension (optional, default: audiobook)",
+  "merge-all-chapters-into-a-single-m4b-audiobook-optional-default": "Merge all chapters into a single M4B audiobook (optional, default: true)",
+  "maximum-text-length-per-tts-request-in-characters-optional-defau": "Maximum text length per TTS request in characters (optional, default: 500)",
+  "path-to-the-generated-audiobook-file": "Path to the generated audiobook file"
+}
