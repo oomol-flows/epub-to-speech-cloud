@@ -1,7 +1,7 @@
 name: epub-to-audiobook-converter
 displayName: "%display-name%"
 description: "%description%"
-version: 0.0.4
+version: 0.0.6
 scripts:
   # Script executed when the container is first loaded
   # eg: bootstrap: poetry add pandas
