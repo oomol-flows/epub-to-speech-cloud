@@ -51,12 +51,6 @@ inputs_def:
     value:
     nullable: true
 
-  - handle: merge
-    description: "%merge-all-chapters-into-a-single-m4b-audiobook-optional-default%"
-    json_schema:
-      type: boolean
-    value:
-    nullable: true
   - handle: max_chunk_length
     description: "%maximum-text-length-per-tts-request-in-characters-optional-defau%"
     json_schema:
@@ -69,7 +63,13 @@ outputs_def:
     description: "%path-to-the-generated-audiobook-file%"
     json_schema:
       type: string
-      ui:widget: file
+      ui:widget: save
+      ui:options:
+        filters:
+          - name: M4B
+            extensions:
+              - m4b
+        excludeAll: true
 
 executor:
   name: python

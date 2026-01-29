@@ -6,9 +6,7 @@ nodes:
       - handle: voice
         value: zh_male_lengkugege_emo_v2_mars_bigtts
       - handle: output_filename
-        value: audiobook
-      - handle: merge
-        value: true
+        value:
       - handle: max_chunk_length
         value: 500
     task: self::epub2speech
