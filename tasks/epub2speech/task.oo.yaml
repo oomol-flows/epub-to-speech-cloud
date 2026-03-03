@@ -38,7 +38,7 @@ inputs_def:
         - en_male_sylus_emo_v2_mars_bigtts
         - en_male_corey_mars_bigtts
         - en_female_nadia_mars_bigtts
-    value: zh_female_tianmeixiaomei_emo_v2_mars_bigtts
+    value: zh_male_lengkugege_emo_v2_mars_bigtts
     nullable: false
 
   - group: optional
