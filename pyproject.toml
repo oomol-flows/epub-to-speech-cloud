@@ -10,7 +10,7 @@ requires-python = ">=3.11,<3.13"
 dependencies = [
     "ebooklib (>=0.19,<0.20)",
     "beautifulsoup4 (>=4.14.3,<5.0.0)",
-    "epub2speech (>=0.0.7,<0.0.8)"
+    "epub2speech (>=0.0.8,<0.0.9)"
 ]
 
 [tool.poetry]
