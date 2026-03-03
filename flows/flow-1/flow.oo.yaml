@@ -3,6 +3,7 @@ nodes:
     title: "%epub-to-speech-1%"
     inputs_from:
       - handle: epub_path
+        value: /oomol-driver/oomol-storage/book_source/test_chinese.epub
       - handle: voice
         value: zh_male_lengkugege_emo_v2_mars_bigtts
       - handle: output_filename

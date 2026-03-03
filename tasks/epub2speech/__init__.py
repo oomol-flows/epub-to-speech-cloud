@@ -70,7 +70,14 @@ async def main(params: Inputs, context: Context) -> Outputs:
         max_tts_segment_chars=max_chunk_length,
         progress_callback=progress_callback,
     )
-    audiobook_path = str(result_path) if result_path and result_path.exists() else ""
+
+    if result_path is None:
+        raise RuntimeError("EPUB to audiobook conversion failed: convert_epub_to_m4b returned None")
+
+    if not result_path.exists():
+        raise RuntimeError(f"EPUB to audiobook conversion failed: output file not created at {result_path}")
+
+    audiobook_path = str(result_path)
 
     context.report_progress(100)
 
