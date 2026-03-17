@@ -18,9 +18,9 @@ from ebooklib import epub
 
 
 async def main(params: Inputs, context: Context) -> Outputs:
-    base_url = "https://fusion-api.oomol.com/v1/doubao-tts"
+    base_url = "https://fusion-api.oomol.com/v1/oomol-tts"
     if _check_is_dev_env(context):
-        base_url = "https://fusion-api.oomol.dev/v1/doubao-tts"
+        base_url = "https://fusion-api.oomol.dev/v1/oomol-tts"
 
     epub_path = params["epub_path"]
     voice = params["voice"]
