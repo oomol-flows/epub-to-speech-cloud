@@ -18,6 +18,10 @@ from ebooklib import epub
 
 
 async def main(params: Inputs, context: Context) -> Outputs:
+    base_url = "https://fusion-api.oomol.com/v1/oomol-tts"
+    if _check_is_dev_env(context):
+        base_url = "https://fusion-api.oomol.dev/v1/oomol-tts"
+
     epub_path = params["epub_path"]
     voice = params["voice"]
 
@@ -35,7 +39,7 @@ async def main(params: Inputs, context: Context) -> Outputs:
     try:
         epub.read_epub(epub_path)
     except Exception as e:
-        raise ValueError(f"Failed to parse EPUB file: {e}. The file may be corrupted or in an unsupported format.")
+        raise ValueError(f"Failed to parse EPUB file: {e}. The file may be corrupted or in an unsupported format.") from e
 
     # Setup workspace and output paths
     workspace = Path(context.session_dir)
@@ -47,7 +51,7 @@ async def main(params: Inputs, context: Context) -> Outputs:
     token = await context.oomol_token()
     tts_engine = DoubaoTextToSpeech(
         access_token=token,
-        base_url="https://fusion-api.oomol.com/v1/doubao-tts"
+        base_url=base_url,
     )
 
     # Define progress callback - receives ConversionProgress object
@@ -84,3 +88,13 @@ async def main(params: Inputs, context: Context) -> Outputs:
     return {
         "audiobook_path": audiobook_path
     }
+
+import re
+DEV_PATTERN = re.compile(r"^https?://[^/]+\.oomol\.dev.*")
+
+def _check_is_dev_env(context: Context) -> bool:
+    base_url = context.oomol_llm_env.get("base_url")
+    if base_url is None:
+        return False
+    else:
+        return bool(DEV_PATTERN.match(base_url))
