@@ -80,3 +80,4 @@ executor:
 title: "%epub-to-speech%"
 icon: ":carbon:book:"
 description: "%convert-epub-e-books-into-audio-using-oomol-tts-extracts-chapter%"
+long_running: true
