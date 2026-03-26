@@ -522,14 +522,14 @@ six = "*"
 
 [[package]]
 name = "epub2speech"
-version = "0.0.8"
-description = "Convert EPUB e-books into high-quality audiobooks using multiple Text-to-Speech providers (Azure, Doubao)"
+version = "0.0.10"
+description = "Convert EPUB e-books into high-quality audiobooks using multiple Text-to-Speech providers (Azure, Doubao, Qwen)"
 optional = false
 python-versions = "<3.14,>=3.11"
 groups = ["main"]
 files = [
-    {file = "epub2speech-0.0.8-py3-none-any.whl", hash = "sha256:5c94872f5e7ad13272c1724622dc23417ba44ed5cf6ee53c0e9f54c19da7068f"},
-    {file = "epub2speech-0.0.8.tar.gz", hash = "sha256:b8ad753aed184e2b1d8e34dca0e5ac89fe692ff50eff711c0536c6fff220351a"},
+    {file = "epub2speech-0.0.10-py3-none-any.whl", hash = "sha256:b0f6ba660ee534ae0a9730c042fc3425748a94d24851b763fcddee09ce7524b2"},
+    {file = "epub2speech-0.0.10.tar.gz", hash = "sha256:837251d4e86e9967c03aefa151e722a41066ee6582f7e4f50f27b6a30eb3ed66"},
 ]
 
 [package.dependencies]
@@ -2095,4 +2095,4 @@ dev = ["pytest", "setuptools"]
 [metadata]
 lock-version = "2.1"
 python-versions = ">=3.11,<3.13"
-content-hash = "f319084da76632a0524aa4001d15727780b80e35042824d916cb856c7f5d5842"
+content-hash = "eb9279e622faf55eb95db802fc1663c857cd14a4a4bc9d17a498b9abecc7ff76"

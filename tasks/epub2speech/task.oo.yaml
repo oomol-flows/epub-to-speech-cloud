@@ -13,32 +13,60 @@ inputs_def:
     nullable: false
 
   - handle: voice
-    description: "%tts-voice-model-oomol-doubao-tts%"
+    description: "%tts-voice-model-oomol-qwen-tts%"
     json_schema:
       type: string
       enum:
-        - zh_male_lengkugege_emo_v2_mars_bigtts
-        - zh_female_tianmeixiaomei_emo_v2_mars_bigtts
-        - zh_female_gaolengyujie_emo_v2_mars_bigtts
-        - zh_male_aojiaobazong_emo_v2_mars_bigtts
-        - zh_male_guangzhoudege_mars_bigtts
-        - zh_male_jingqiangkanye_mars_bigtts
-        - zh_female_linjuaayi_mars_bigtts
-        - zh_male_yourougongzi_mars_bigtts
-        - zh_male_ruyananyou_emo_v2_mars_bigtts
-        - zh_male_junlangnanyou_emo_v2_mars_bigtts
-        - zh_male_beijingxiaoye_mars_bigtts
-        - zh_female_roumeinvyou_emo_v2_mars_bigtts
-        - zh_male_yangguangqingnian_emo_v2_mars_bigtts
-        - zh_female_meilinvyou_emo_v2_mars_bigtts
-        - zh_male_shenyeboke_mars_bigtts
-        - en_female_candice_emo_v2_mars_bigtts
-        - en_female_serena_emo_v2_mars_bigtts
-        - en_male_glen_emo_v2_mars_bigtts
-        - en_male_sylus_emo_v2_mars_bigtts
-        - en_male_corey_mars_bigtts
-        - en_female_nadia_mars_bigtts
-    value: zh_male_lengkugege_emo_v2_mars_bigtts
+        - Cherry
+        - Serena
+        - Ethan
+        - Chelsie
+        - Momo
+        - Vivian
+        - Moon
+        - Maia
+        - Kai
+        - Nofish
+        - Bella
+        - Jennifer
+        - Ryan
+        - Katerina
+        - Aiden
+        - Eldric Sage
+        - Mia
+        - Mochi
+        - Bellona
+        - Vincent
+        - Bunny
+        - Neil
+        - Elias
+        - Arthur
+        - Nini
+        - Ebona
+        - Seren
+        - Pip
+        - Stella
+        - Bodega
+        - Sonrisa
+        - Alek
+        - Dolce
+        - Sohee
+        - Ono Anna
+        - Lenn
+        - Emilien
+        - Andre
+        - Radio Gol
+        - Jada
+        - Dylan
+        - Li
+        - Marcus
+        - Roy
+        - Peter
+        - Sunny
+        - Eric
+        - Rocky
+        - Kiki
+    value: Cherry
     nullable: false
 
   - group: optional
