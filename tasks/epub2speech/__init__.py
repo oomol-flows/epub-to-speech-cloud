@@ -2,7 +2,7 @@
 import typing
 class Inputs(typing.TypedDict):
     epub_path: str
-    voice: typing.Literal["zh_male_lengkugege_emo_v2_mars_bigtts", "zh_female_tianmeixiaomei_emo_v2_mars_bigtts", "zh_female_gaolengyujie_emo_v2_mars_bigtts", "zh_male_aojiaobazong_emo_v2_mars_bigtts", "zh_male_guangzhoudege_mars_bigtts", "zh_male_jingqiangkanye_mars_bigtts", "zh_female_linjuaayi_mars_bigtts", "zh_male_yourougongzi_mars_bigtts", "zh_male_ruyananyou_emo_v2_mars_bigtts", "zh_male_junlangnanyou_emo_v2_mars_bigtts", "zh_male_beijingxiaoye_mars_bigtts", "zh_female_roumeinvyou_emo_v2_mars_bigtts", "zh_male_yangguangqingnian_emo_v2_mars_bigtts", "zh_female_meilinvyou_emo_v2_mars_bigtts", "zh_male_shenyeboke_mars_bigtts", "en_female_candice_emo_v2_mars_bigtts", "en_female_serena_emo_v2_mars_bigtts", "en_male_glen_emo_v2_mars_bigtts", "en_male_sylus_emo_v2_mars_bigtts", "en_male_corey_mars_bigtts", "en_female_nadia_mars_bigtts"]
+    voice: typing.Literal["Cherry", "Serena", "Ethan", "Chelsie", "Momo", "Vivian", "Moon", "Maia", "Kai", "Nofish", "Bella", "Jennifer", "Ryan", "Katerina", "Aiden", "Eldric Sage", "Mia", "Mochi", "Bellona", "Vincent", "Bunny", "Neil", "Elias", "Arthur", "Nini", "Ebona", "Seren", "Pip", "Stella", "Bodega", "Sonrisa", "Alek", "Dolce", "Sohee", "Ono Anna", "Lenn", "Emilien", "Andre", "Radio Gol", "Jada", "Dylan", "Li", "Marcus", "Roy", "Peter", "Sunny", "Eric", "Rocky", "Kiki"]
     output_filename: str | None
     max_chunk_length: float | None
 class Outputs(typing.TypedDict):
@@ -11,16 +11,16 @@ class Outputs(typing.TypedDict):
 
 from oocana import Context
 from epub2speech import convert_epub_to_m4b, ConversionProgress
-from epub2speech.tts.doubao_provider import DoubaoTextToSpeech
+from epub2speech.tts.qwen_provider import QwenTextToSpeech
 from pathlib import Path
 import os
 from ebooklib import epub
 
 
 async def main(params: Inputs, context: Context) -> Outputs:
-    base_url = "https://fusion-api.oomol.com/v1/oomol-tts"
+    base_url = "https://fusion-api.oomol.com/v1/oomol-tts-ng"
     if _check_is_dev_env(context):
-        base_url = "https://fusion-api.oomol.dev/v1/oomol-tts"
+        base_url = "https://fusion-api.oomol.dev/v1/oomol-tts-ng"
 
     epub_path = params["epub_path"]
     voice = params["voice"]
@@ -47,9 +47,9 @@ async def main(params: Inputs, context: Context) -> Outputs:
 
     context.report_progress(10)
 
-    # Get OOMOL token and create TTS engine using the library's DoubaoTextToSpeech
+    # Get OOMOL token and create TTS engine using the library's QwenTextToSpeech
     token = await context.oomol_token()
-    tts_engine = DoubaoTextToSpeech(
+    tts_engine = QwenTextToSpeech(
         access_token=token,
         base_url=base_url,
     )
